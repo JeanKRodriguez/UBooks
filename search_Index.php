@@ -1,8 +1,8 @@
 <!DOCTYPE >
 <html>
-<?php include 'PHP/test_db.php';?>
+<?php include 'PHP/search_functions.php';?>
 <title>UBooks Main Page</title>
-<link rel="stylesheet" href="style/style.css"/>
+<link rel="stylesheet" href="style/index_style.css"/>
 
 <body>
 
@@ -21,11 +21,11 @@
 			<div class="menu_bar">
 				<ul id="menu">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="testHome.php">About us</a></li>
+					<li><a href="">About us</a></li>
 				</ul>
 								
 				<div id="form">
-					<form action="testHome.php" method="post">
+					<form action="search_Index.php" method="post">
 						<select name="searchtype">
 							<option value="showAll">All</option>
 							<option value="author">Author</option>
