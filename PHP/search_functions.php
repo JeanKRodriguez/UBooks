@@ -14,7 +14,7 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 			 
-		 $sql = "SELECT * FROM books";
+		 $sql = "SELECT * FROM products natural join books";
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 					// output data of each row
@@ -54,9 +54,9 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 		if($searchtype== 'showAll'){
-			$sql = "SELECT * FROM books";
+			$sql = "SELECT * FROM products natural join books";
 		}else{ 
-			$sql = "SELECT * FROM books WHERE ".$searchtype." like '%".$searchterm."%'"; 
+			$sql = "SELECT * FROM products natural join books WHERE ".$searchtype." like '%".$searchterm."%'"; 
 		}
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {

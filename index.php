@@ -20,7 +20,7 @@
 		<hr>
 			<div class="menu_bar">
 				<ul id="menu">
-					<li><a href="search_Index.php">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><a href="">About us</a></li>
 				</ul>
 								
