@@ -14,7 +14,7 @@
 		<!--Header -->
 		<div class="header">
 			<!--Login and Sign up Links -->
-			<div class="Account_header"> Welcome  <?php echo $_SESSION['my_user_name'];?>| <a href="logout_session.php" >Logout</a> </div>
+			<div class="Account_header"> (Welcome  <?php echo $_SESSION['my_user_name'];?> ) <a href="index.php" > Logout</a> </div>
 
 			<h1>UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
 		</div>
@@ -24,8 +24,9 @@
 		<hr>
 			<div class="menu_bar">
 				<ul id="menu">
-					<li><a href="index.php">Home</a></li>
-					<li><a href="">About us</a></li>
+					<li><a href="authentication_Page.php">Home</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="">History</a></li>
 				</ul>
 								
 				<div id="form">
@@ -54,7 +55,7 @@
 			</div>
 			
 		</div>
-		<div id="footer">by Jean K.</div> 
+		<div id="footer"></div> 
 	</div>
 	
 </body>

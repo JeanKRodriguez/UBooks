@@ -34,4 +34,15 @@
 		  $db_conn->close();
 		}
 	}
+	
+		
+	function ending_session(){
+		session_start();
+		// store to test if they *were* logged in
+	    $GLOBALS['old_user'] = $_SESSION['my_user_ID'];  
+	    unset($_SESSION['my_user_ID']);
+		unset($_SESSION['my_user_name']);
+		session_destroy();
+	}
+
 ?>

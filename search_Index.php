@@ -10,7 +10,7 @@
 		<!--Header -->
 		<div class="header">
 			<!--Login and Sign up Links -->
-			<div class="Account_header"> <a href="loginPage.php" >Login</a> | <a href="http://www.amazon.com/" >Sign up</a> </div>
+			<div class="Account_header"> (You were not logged in.) <a href="loginPage.php" > Login</a> | <a href="" >Sign up</a> </div>
 
 			<h1>UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
 		</div>
@@ -50,7 +50,7 @@
 			</div>
 			
 		</div>
-		<div id="footer">by Jean K.</div> 
+		<div id="footer"></div> 
 	</div>
 </body>
 </html>
