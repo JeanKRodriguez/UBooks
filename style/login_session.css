@@ -49,91 +49,14 @@ footer, header, hgroup, menu, nav, section {
 	height:auto;
 	margin:auto;
 	text-align:center;
-	padding:5px;	
-}
-.Account_header {
-	text-align:right;
-	padding:7px;
-}
-.menu_bar{
-	width:1000px;
-	height:50px;
-	padding-top:10px;	
+	padding:10px;	
 }
 
-#menu{
-	padding:5px;
-	margin:0;
-	line-height:35px;
-	float:left;
-}
-
-#menu li{
-	list-style:none;
-	display:inline;
-}
-
-#menu a{
-	text-decoration:none;
-	color:black;
-	padding:8px;
-	margin:5px;
-	font-size:18px;
-}
-
-#menu a:hover{color:red; font-wight:bolder; text-decoration:underline;}
-
-.content_wrapper{
-	width:1000px;
-	height:700px;
-	margin:auto;
-}
-#content_area{
-	width:1000px;
-}
-
-#book_list2{
-	width:100%;
-}
-
-
-
-#book_list2 td{
-	text-align:left;
-	padding:10px;
-	border-bottom: 1px solid #ddd;
-}
-
-#book_list2 a{
-	text-decoration:none;
-	color:black;
-	padding:8px;
-	margin:5px;
-	font-size:18px;
-}
-
-#book_list2 a:hover{color:red; font-wight:bolder; text-decoration:underline;}
-
-#form{
-	float:right;
-	padding-right:8px;
-	line-height:40px;
-}
-#footer{
-	width:1000px;
-	height:50px;
-	margin:auto;
-	background:black;
-	color:white;
-	clear:both;
-	text-align:center;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+table {
+	padding:50px;
+	margin: auto;
 }
 
 h1{
 	font-size:300%;
-}
-p {
-	text-align:center;
 }

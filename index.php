@@ -1,6 +1,6 @@
 <!DOCTYPE >
 <html>
-<?php include 'PHP/search_functions.php';?>
+<?php require_once('PHP/search_functions.php');?>
 <title>UBooks Main Page</title>
 <link rel="stylesheet" href="style/index_style.css"/>
 
@@ -10,7 +10,7 @@
 		<!--Header -->
 		<div class="header">
 			<!--Login and Sign up Links -->
-			<div class="Account_header"> <a href="http://www.amazon.com/" >Login</a> | <a href="http://www.amazon.com/" >Sign up</a> </div>
+			<div class="Account_header"> <a href="loginPage.php" >Login</a> | <a href="http://www.amazon.com/" >Sign up</a> </div>
 
 			<h1>UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
 		</div>
