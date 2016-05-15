@@ -16,7 +16,7 @@
 			<!--Login and Sign up Links -->
 			<div class="Account_header"> (Welcome  <?php echo $_SESSION['my_user_name'];?> ) <a href="index.php" > Logout</a> </div>
 
-			<h1>UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
+			<h1 id="title">UBooks </h1>
 		</div>
 		<!--End Header -->
 		
@@ -30,7 +30,7 @@
 				</ul>
 								
 				<div id="form">
-					<form action="search_Index.php" method="post">
+					<form action="authentication_Page.php" method="post">
 						<select name="searchtype">
 							<option value="showAll">All</option>
 							<option value="author">Author</option>

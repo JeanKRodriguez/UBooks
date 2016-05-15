@@ -46,10 +46,14 @@ footer, header, hgroup, menu, nav, section {
 }
 .header {
 	width:1000px;
-	height:auto;
+	height:200px;
 	margin:auto;
 	text-align:center;
 	padding:5px;	
+}
+
+#title{
+	padding-top:50px;
 }
 .Account_header {
 	text-align:right;
