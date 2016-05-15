@@ -47,17 +47,21 @@ footer, header, hgroup, menu, nav, section {
 }
 .header {
 	width:1000px;
-	height:auto;
+	height:400px;
 	margin:auto;
 	text-align:center;
 	padding:10px;	
 }
 
+#title{
+	padding-top:50px;
+}
+
 table {
-	padding:50px;
+	padding:90px;
 	margin: auto;
 }
 
-h1{
+h2{
 	font-size:300%;
 }

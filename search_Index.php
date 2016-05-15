@@ -12,7 +12,7 @@
 			<!--Login and Sign up Links -->
 			<div class="Account_header"> (You were not logged in.) <a href="loginPage.php" > Login</a> | <a href="" >Sign up</a> </div>
 
-			<h1>UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
+			<h1 id="title">UBooks </h1>
 		</div>
 		<!--End Header -->
 		
