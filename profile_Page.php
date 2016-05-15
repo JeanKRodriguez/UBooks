@@ -1,12 +1,8 @@
-<?php
-	require_once('PHP/login_session_functions.php');
-	starting_session();
-?>
-
+<?php session_start();?>
 <html>
-<?php require_once('PHP/search_functions.php');?>
-<title>Authentication Page</title>
-<link rel="stylesheet" href="style/index_style.css"/>
+<?php require_once('PHP/login_session_functions.php');?>
+<title>Profile Page</title>
+<link rel="stylesheet" href="style/profile_history.css"/>
 
 <body>
 
@@ -27,20 +23,8 @@
 					<li><a href="authentication_Page.php">Home</a></li>
 					<li><a href="profile_Page.php">Profile</a></li>
 					<li><a href="">History</a></li>
-				</ul>
-								
-				<div id="form">
-					<form action="authentication_Page.php" method="post">
-						<select name="searchtype">
-							<option value="showAll">All</option>
-							<option value="author">Author</option>
-							<option value="title">Title</option>
-							<option value="isbn">ISBN</option>
-						</select>
-						<input name="searchterm" type="text">
-						<input type="submit" value="search">
-				</form>
-				</div>
+				</ul>	
+				
 			</div>
 		<hr>
 		
@@ -48,8 +32,10 @@
 		<div class="content_wrapper">
 			<div id="content_area">
 				<!--display database content-->
-				<?php seachProducts();?> 
-				
+				<?php 
+					view_user_info();
+					my_books_for_sale();
+				?>
 				<!--END display database content-->
 				
 			</div>
@@ -60,4 +46,3 @@
 	
 </body>
 </html>
-

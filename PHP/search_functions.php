@@ -1,13 +1,14 @@
 
 <?php  
-
+	
+	
 	DEFINE('DB_USERNAME', 'root');
 	DEFINE('DB_PASSWORD', 'root');
 	DEFINE('DB_HOST', 'localhost');
 	DEFINE('DB_DATABASE', 'ubooks');
 		 
 	function viewAll(){
-		 
+
 		$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 		 if (mysqli_connect_error()) {
@@ -25,7 +26,7 @@
 				$price= $row["price"];
 						
 				echo '	<tr>';
-				echo'		<td><a href="Product_info.php">Title: '.$title.'</a></td>';
+				echo'		<td><a href="">Title: '.$title.'</a></td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'	</tr>';
