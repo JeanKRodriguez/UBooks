@@ -15,7 +15,8 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 			 
-		 $sql = "SELECT * FROM products natural join books";
+		 $sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders)";
+		 
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
 					// output data of each row
@@ -55,9 +56,9 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 		if($searchtype== 'showAll'){
-			$sql = "SELECT * FROM products natural join books";
+			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders)";
 		}else{ 
-			$sql = "SELECT * FROM products natural join books WHERE ".$searchtype." like '%".$searchterm."%'"; 
+			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders) and ".$searchtype." like '%".$searchterm."%'"; 			
 		}
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {

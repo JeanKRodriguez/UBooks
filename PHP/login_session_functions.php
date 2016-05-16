@@ -75,8 +75,7 @@
 			  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 			}
 			
-			$sql = "SELECT * FROM products natural join books  WHERE user_ID='".$_SESSION['my_user_ID']."'"; 
-			
+			$sql = "SELECT * FROM products natural join books  WHERE product_ID not in (select product_ID from orders) and user_ID='".$_SESSION['my_user_ID']."'"; 			
 			$result = $mysqli->query($sql);
 			echo'<h2 style="padding-top:50px">My Books for Sale:</h2>';			
 			if ($result->num_rows > 0) {
@@ -86,17 +85,19 @@
 					$title= $row["title"];
 					$author= $row["author"];
 					$price= $row["price"];
-					$quantity= $row["qty"];
 							
 					echo '	<tr>';
 					echo'		<td><a href="">Title: '.$title.'</a></td>';
 					echo'		<td>Author:'.$author.'</td>';
 					echo'		<td>Price:'.$price.'$</td>';
-					echo'		<td>Qty:'.$quantity.'</td>';
 					echo'	</tr>';
-								
-				}	
+				}
 				echo'</table>';
+				echo'	<div style="padding-left:100px;padding-top:50px">';
+				echo'		<form action="">';
+				echo'			<button >Order</button>';
+				echo'		</form>';
+				echo'	</div>';
 			} else {
 			echo "<p>You have no books for sale</p>";
 			}
