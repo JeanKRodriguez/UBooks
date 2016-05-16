@@ -15,7 +15,7 @@
 		<div class="header">
 			<!--Login and Sign up Links -->
 			<div class="Account_header"> 
-			<?php if (!empty($old_user)){echo '(Logged out.) ';}else{ echo '(You were not logged in.) '; }?>
+			<?php if (!empty($old_user)){echo '(Logged out.) ';}else{ echo '(You are not logged in.) '; }?>
 			<a href="loginPage.php" >Login</a> | <a href="" >Sign up</a> 
 			</div>
 
