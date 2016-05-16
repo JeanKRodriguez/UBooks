@@ -36,14 +36,7 @@
 		
 		<!--List of Books-->
 		<div class="content_wrapper">
-			<div id="content_area">
-				<!--display database content-->
-				<?php viewAll();?>
-				
-				<!--END display database content-->
-				
-			</div>
-            
+			            
             <!--Spacer-->
 
              <div style = "width: 10% ; float: left; height:500px">

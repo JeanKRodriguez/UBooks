@@ -26,7 +26,7 @@
 				$price= $row["price"];
 						
 				echo '	<tr>';
-				echo'		<td><a href="">Title: '.$title.'</a></td>';
+				echo'		<td><a href="book_information.php">Title: '.$title.'</a></td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'	</tr>';
@@ -69,7 +69,7 @@
 				$price= $row["price"];
 						
 				echo '	<tr>';
-				echo'		<td><a href="Product_info.php">Title: '.$title.'</a></td>';
+				echo'		<td><a href="book_information.php">Title: '.$title.'</a></td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'	</tr>';
