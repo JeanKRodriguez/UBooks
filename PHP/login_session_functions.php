@@ -64,6 +64,11 @@
 			echo'	<tr><td> Phone Number: '.$user["phone_num"].'<td></tr>';
 			echo'	<tr><td> Email: '.$user["email"].'<td></tr>';	
 			echo'</table>';
+			echo'	<div style="padding-left:100px;padding-top:50px">';
+			echo'		<form action="">';
+			echo'			<button >Edit</button>';
+			echo'		</form>';
+			echo'	</div>';
 			
 	}
 	
@@ -100,6 +105,75 @@
 				echo'	</div>';
 			} else {
 			echo "<p>You have no books for sale</p>";
+			}
+	}
+	
+	function my_sold_books(){
+			session_start();
+			$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+			if (mysqli_connect_error()) {
+			  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+			}
+			
+			$sql = "SELECT * FROM products,orders,books WHERE products.product_ID= orders.product_ID and products.isbn_10=books.isbn_10 and products.user_ID='".$_SESSION['my_user_ID']."'"; 	
+		
+			$result = $mysqli->query($sql);
+			echo'<h2 style="padding-top:50px">My Sold Books:</h2>';			
+			if ($result->num_rows > 0) {
+			// output data of each row
+				echo '<table id="book_list2">';
+				while($row = $result->fetch_assoc()) {
+					$title= $row["title"];
+					$author= $row["author"];
+					$price= $row["price"];
+							
+					echo '	<tr>';
+					echo'		<td><a href="">Title: '.$title.'</a></td>';
+					echo'		<td>Author:'.$author.'</td>';
+					echo'		<td>Price:'.$price.'$</td>';
+					echo'	</tr>';
+				}
+				echo'</table>';
+			} else {
+			echo "<p>You have not sold any books</p>";
+			}
+	}
+	
+	function my_ordered_books(){
+			session_start();
+			$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+			if (mysqli_connect_error()) {
+			  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+			}
+			
+			$sql = "SELECT * FROM products natural join books  WHERE product_ID in(select product_ID from orders where user_ID='".$_SESSION['my_user_ID']."')"; 			
+			$result = $mysqli->query($sql);
+			echo'<h2 style="padding-top:50px">My Ordered Books:</h2>';			
+			if ($result->num_rows > 0) {
+			// output data of each row
+				echo '<table id="book_list2">';
+				while($row = $result->fetch_assoc()) {
+					$title= $row["title"];
+					$author= $row["author"];
+					$price= $row["price"];
+							
+					echo '	<tr>';
+					echo'		<td><a href="">Title: '.$title.'</a></td>';
+					echo'		<td>Author:'.$author.'</td>';
+					echo'		<td>Price:'.$price.'$</td>';
+					echo'		<td>';
+					echo'			<form action="">';
+					echo'				<button >Create Review</button>';
+					echo'			</form>';
+					echo'		</td>';
+					echo'	</tr>';
+				}
+				echo'</table>';
+
+			} else {
+			echo "<p>You have not ordered any books</p>";
 			}
 	}
 ?>

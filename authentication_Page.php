@@ -26,7 +26,7 @@
 				<ul id="menu">
 					<li><a href="authentication_Page.php">Home</a></li>
 					<li><a href="profile_Page.php">Profile</a></li>
-					<li><a href="">History</a></li>
+					<li><a href="history_Page.php">History</a></li>
 				</ul>
 								
 				<div id="form">

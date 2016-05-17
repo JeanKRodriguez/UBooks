@@ -1,7 +1,7 @@
 <?php session_start();?>
 <html>
 <?php require_once('PHP/login_session_functions.php');?>
-<title>Profile Page</title>
+<title>History Page</title>
 <link rel="stylesheet" href="style/profile_history.css"/>
 
 <body>
@@ -32,9 +32,10 @@
 		<div class="content_wrapper">
 			<div id="content_area">
 				<!--display database content-->
+				<h2 align="center" style="padding-top:20px"> User Name: <?php echo $_SESSION['my_user_name'];?> </h2>
 				<?php 
-					view_user_info();
-					my_books_for_sale();
+					my_sold_books();
+					my_ordered_books();
 				?>
 				<!--END display database content-->
 				
