@@ -1,5 +1,5 @@
 <?php
-	require_once('PHP/login_session_functions.php');
+	require_once('PHP/book_info_functions.php');
 	ending_session();
 ?>
 <!DOCTYPE >

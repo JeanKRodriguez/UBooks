@@ -9,7 +9,7 @@
 
 
 	function viewDetails{
-		$this_prod  = $_POST{"product_ID"};
+		$this_prod  = $_POST["product_ID"];
 
 		$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 

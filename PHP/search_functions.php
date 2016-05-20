@@ -25,13 +25,14 @@
 				$title= $row["title"];
 				$author= $row["author"];
 				$price= $row["price"];
+				$products = $row["product_ID"];
 						
 				echo'	<tr>';
-				echo'		<td><a href="book_information.php">Title: '.$title.'</a></td>';
+				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'		<td>					   ';
-				echo'			<form action="book_information.php" method="post">';
+				echo'			<form action="book_information.php?pro_id='.$products.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
 				echo'			</form>';
 				echo'		</td>					   ';
