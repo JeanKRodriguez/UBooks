@@ -30,6 +30,11 @@
 				echo'		<td><a href="book_information.php">Title: '.$title.'</a></td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
+				echo'		<td>					   ';
+				echo'			<form action="book_information.php" method="post">';
+				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
+				echo'			</form>';
+				echo'		</td>					   ';
 				echo'	</tr>';
 							
 			}	
@@ -70,10 +75,17 @@
 				$price= $row["price"];
 			    $pro_ID = $row["product_ID"];
 
+				$products= $row["product_ID"];
+						
 				echo '	<tr>';
-				echo'		<td><a href="./'.$pro_ID.'>Title: '.$title.'</a></td>';
+				echo'		<td><a href="">Title: '.$title.'</a></td>';
 				echo'		<td>Author:'.$author.'</td>';
-				echo'		<td>Price:'.$price.'$</td>';
+				echo'		<td>Price:'.$price.' $</td>';
+				echo'		<td>					   ';
+				echo'			<form action="book_information.php" method="post">';
+				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
+				echo'			</form>';
+				echo'		</td>					   ';
 				echo'	</tr>';
 							
 			}	
