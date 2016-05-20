@@ -1,10 +1,10 @@
-<?php
-	require_once('PHP/book_info_functions.php');
-	ending_session();
-?>
 <!DOCTYPE >
 <html>
-<?php require_once('PHP/search_functions.php');?>
+<?php 
+		require_once('PHP/search_functions.php');
+		require_once('PHP/book_info_functions.php');
+	  
+?>
 <title>Book Information</title>
 <link rel="stylesheet" href="style/index_style.css"/>
 
@@ -14,12 +14,9 @@
 		<!--Header -->
 		<div class="header">
 			<!--Login and Sign up Links -->
-			<div class="Account_header"> 
-			<?php if (!empty($old_user)){echo '(Logged out.) ';}else{ echo '(You are not logged in.) '; }?>
-			<a href="loginPage.php" >Login</a> | <a href="" >Sign up</a> 
-			</div>
+			<div class="Account_header"> (You are not logged in.) <a href="loginPage.php" > Login</a> | <a href="" >Sign up</a> </div>
 
-			<h1> UBooks <br><img src="Book.png" width="150" height="110" align="bottom"></br></h1>
+			<h1 id="title">UBooks </h1>
 		</div>
 		<!--End Header -->
 		
@@ -36,14 +33,16 @@
 		
 		<!--List of Books-->
 		<div class="content_wrapper">
-			            
-            <!--Spacer-->
-
-             <div style = "width: 10% ; float: left; height:500px">
+			      
+			<div style = "width: 10% ; float: left; height:500px">
     		 </div>
-            
-         <?php viewDetails();?>
-
+            <?php viewDetails();?>
+		</div>
+		
+		
+		<div id="footer"></div> 
+	</div>
+	
 </body>
 </html>
 
@@ -62,6 +61,5 @@
     display: inline-block;
     font-size: 16px;
 }
-
 </style>
 
