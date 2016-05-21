@@ -26,7 +26,7 @@
 				$author= $row["author"];
 				$price= $row["price"];
 
-				$products = $row["product_ID"];
+				$pro_ID = $row["product_ID"];
 
 						
 				echo'	<tr>';
@@ -34,9 +34,8 @@
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'		<td>					   ';
-				echo'			<form action="book_information.php?pro_id='.$products.'" method="post">';
-
-				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
+				echo'			<form action="book_information.php?p_id='.$pro_ID.'" method="post">';
+				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
 				echo'			</form>';
 				echo'		</td>					   ';
 				echo'	</tr>';
@@ -85,7 +84,7 @@
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.' $</td>';
 				echo'		<td>					   ';
-				echo'			<form action="book_information.php" method="post">';
+				echo'			<form action="book_information.php?p_id='.$pro_ID.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
 				echo'			</form>';
 				echo'		</td>					   ';

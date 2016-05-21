@@ -8,10 +8,15 @@
 	DEFINE('DB_DATABASE', 'ubooks');
 
 
+<<<<<<< HEAD
 
 	function viewDetails{
 		$this_prod  = $_POST["product_ID"];
 
+=======
+	function viewDetails(){
+		$this_prod = $_POST['product_ID'];
+>>>>>>> b68235878901f5cf0b1705e135aab93362723ef7
 
 		$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
@@ -20,7 +25,7 @@
 		}
 		
 		// Needs to be fixed
-		$sql = 'SELECT * FROM products , books , users , review  WHERE products.isbn_10 =books.isbn_10 and products.user_ID=users.user_ID and users.user_ID=review.reviewing_ID and products.product_ID="31634"';
+		$sql = 'SELECT * FROM products , books , users , review  WHERE products.isbn_10 =books.isbn_10 and products.user_ID=users.user_ID and users.user_ID=review.reviewing_ID and products.product_ID="'.$_POST['product_ID'].'"';
 		
 		$result = $mysqli->query($sql);
 		$row = $result->fetch_assoc();
