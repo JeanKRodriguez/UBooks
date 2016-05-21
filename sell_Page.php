@@ -1,5 +1,3 @@
-<?php session_start();?>
-
 <html>
 
 <?php require_once('PHP/publish_book.php');?>
@@ -58,7 +56,7 @@
 									  <span class="error"></span>
 									  <br><br>
 									  ISBN: <input type="text" name="isbn_10">
-									  <span class="error"><?php echo $isbn_10Err;?></span>
+									  <span class="error"></span>
 									  <br><br>
 			  
 									  <input type="submit" name="submit" value="Submit">  
