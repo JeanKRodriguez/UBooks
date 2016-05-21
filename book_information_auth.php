@@ -28,6 +28,7 @@
 					<li><a href="authentication_Page.php">Home</a></li>
 					<li><a href="profile_Page.php">Profile</a></li>
 					<li><a href="history_Page.php">History</a></li>
+					<li><a href="sell_Page.php">Sell</a></li>
 				</ul>
 								
 			</div>

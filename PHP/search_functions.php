@@ -25,9 +25,7 @@
 				$title= $row["title"];
 				$author= $row["author"];
 				$price= $row["price"];
-
 				$pro_ID = $row["product_ID"];
-
 						
 				echo'	<tr>';
 				echo'		<td>Title: '.$title.'</td>';
