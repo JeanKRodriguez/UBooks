@@ -18,7 +18,8 @@
 		if (mysqli_connect_error()) {
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		}
-
+		
+		// Needs to be fixed
 		$sql = 'SELECT * FROM products , books , users , review  WHERE products.isbn_10 =books.isbn_10 and products.user_ID=users.user_ID and users.user_ID=review.reviewing_ID and products.product_ID="31634"';
 		
 		$result = $mysqli->query($sql);
