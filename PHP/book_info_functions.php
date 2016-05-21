@@ -25,8 +25,10 @@
 		}
 		
 		// Needs to be fixed
-		$sql = 'SELECT * FROM products , books , users , review  WHERE products.isbn_10 =books.isbn_10 and products.user_ID=users.user_ID and users.user_ID=review.reviewing_ID and products.product_ID="'.$_POST['product_ID'].'"';
-		
+		$sql = 'SELECT title, author, subject, edition, publish_date, books.isbn_10, user_name, phone_num,pay_method, delivery_method, avg(stars) as stars,price 
+				FROM products , books , users , review 
+				WHERE products.isbn_10 =books.isbn_10 and products.user_ID=users.user_ID and users.user_ID=review.reviewing_ID and products.product_ID="'.$_POST['product_ID'].'"';
+				
 		$result = $mysqli->query($sql);
 		$row = $result->fetch_assoc();
 		
@@ -41,7 +43,7 @@
 				$phone = $row["phone_num"];
 				$pay =  $row["pay_method"];
 				$delivery = $row["delivery_method"];
-				$review = $row["stars"];
+				$review = round($row["stars"],1);
 
 				$price = $row["price"];
 
@@ -77,8 +79,9 @@
             	echo ' </center>';
             echo '</div>';      
 
-	
+			$mysqli->close();
 	}
+	
 
 
 ?>

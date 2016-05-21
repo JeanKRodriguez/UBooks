@@ -69,7 +69,7 @@
 			echo'			<button >Edit</button>';
 			echo'		</form>';
 			echo'	</div>';
-			
+			$mysqli->close();
 	}
 	
 	function my_books_for_sale(){
@@ -112,6 +112,7 @@
 			} else {
 			echo "<p>You have no books for sale</p>";
 			}
+			$mysqli->close();
 	}
 	
 	function my_sold_books(){
@@ -150,6 +151,7 @@
 			} else {
 			echo "<p>You have not sold any books</p>";
 			}
+			$mysqli->close();
 	}
 	
 	function my_ordered_books(){
@@ -171,6 +173,7 @@
 					$author= $row["author"];
 					$price= $row["price"];
 					$pro_ID = $row["product_ID"];
+					$reviewer_ID= $row["user_ID"];
 							
 					echo '	<tr>';
 					echo'		<td><a href="">Title: '.$title.'</a></td>';
@@ -182,16 +185,45 @@
 					echo'			</form>';
 					echo'		</td>					   ';
 					echo'		<td>';
-					echo'			<form action="">';
-					echo'				<button >Create Review</button>';
+					echo'			<form action="Review_Page.php" method="post">';
+					echo'				<button name="This_reviewer_ID" type="submit" value="'.$reviewer_ID.'">Create Review</button>';
 					echo'			</form>';
 					echo'		</td>';
 					echo'	</tr>';
 				}
 				echo'</table>';
 
-			} else {
-			echo "<p>You have not ordered any books</p>";
+			} 
+			else {
+				echo "<p>You have not ordered any books</p>";
 			}
+			$mysqli->close();
+	}
+	
+	// SignUP functions
+	
+	
+	function Create_new_User($user_name_new, $email_new, $phone_num_new, $passwords_new){
+		
+			$crypt_pass=sha1(trim($passwords_new));
+			
+			$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+			if (mysqli_connect_error()) {
+			  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+			}
+			
+			$max_ID= $mysqli->query('select max(user_ID) as user_ID from users');
+			$new_ID = $max_ID->fetch_assoc();
+			$new_userID= $new_ID['user_ID'] + 1;
+			
+			$sql='insert into users values("'.$new_userID.'","'.$user_name_new.'",'.$phone_num_new.', "'.$email_new.'","'.$crypt_pass.'")';
+			
+			$result= $mysqli->query($sql);
+			
+			if($result){
+				echo'<p>Congratulations</p>';
+			}
+			$mysqli->close();		
 	}
 ?>

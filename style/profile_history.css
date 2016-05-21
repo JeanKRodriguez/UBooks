@@ -89,7 +89,7 @@ footer, header, hgroup, menu, nav, section {
 
 .content_wrapper{
 	width:1000px;
-	height:700px;
+	height:800px;
 	margin:auto;
 }
 #content_area{
@@ -160,6 +160,12 @@ h1{
 
 h2{
 	font-size:200%;
+	text-align:center;
+}
+
+table {
+	padding:90px;
+	margin: auto;
 }
 p {
 	text-align:center;
