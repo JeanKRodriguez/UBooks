@@ -25,13 +25,14 @@
 				$title= $row["title"];
 				$author= $row["author"];
 				$price= $row["price"];
+				$pro_ID = $row["product_ID"];
 						
 				echo'	<tr>';
-				echo'		<td><a href="book_information.php">Title: '.$title.'</a></td>';
+				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.'$</td>';
 				echo'		<td>					   ';
-				echo'			<form action="book_information.php" method="post">';
+				echo'			<form action="book_information.php?p_id='.$pro_ID.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
 				echo'			</form>';
 				echo'		</td>					   ';
@@ -75,15 +76,14 @@
 				$price= $row["price"];
 			    $pro_ID = $row["product_ID"];
 
-				$products= $row["product_ID"];
 						
 				echo '	<tr>';
-				echo'		<td><a href="">Title: '.$title.'</a></td>';
+				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
 				echo'		<td>Price:'.$price.' $</td>';
 				echo'		<td>					   ';
 				echo'			<form action="book_information.php" method="post">';
-				echo'				<button name="product_ID" type="submit" value="'.$products.'">View Information</button>';
+				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
 				echo'			</form>';
 				echo'		</td>					   ';
 				echo'	</tr>';
