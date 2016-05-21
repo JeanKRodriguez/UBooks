@@ -90,11 +90,17 @@
 					$title= $row["title"];
 					$author= $row["author"];
 					$price= $row["price"];
+					$pro_ID = $row["product_ID"];
 							
 					echo '	<tr>';
 					echo'		<td><a href="">Title: '.$title.'</a></td>';
 					echo'		<td>Author:'.$author.'</td>';
 					echo'		<td>Price:'.$price.'$</td>';
+					echo'		<td>					   ';
+					echo'			<form action="book_information_auth.php?p_id='.$pro_ID.'" method="post">';
+					echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
+					echo'			</form>';
+					echo'		</td>					   ';
 					echo'	</tr>';
 				}
 				echo'</table>';
@@ -127,11 +133,17 @@
 					$title= $row["title"];
 					$author= $row["author"];
 					$price= $row["price"];
+					$pro_ID = $row["product_ID"];
 							
 					echo '	<tr>';
 					echo'		<td><a href="">Title: '.$title.'</a></td>';
 					echo'		<td>Author:'.$author.'</td>';
 					echo'		<td>Price:'.$price.'$</td>';
+					echo'		<td>					   ';
+					echo'			<form action="book_information_auth.php?p_id='.$pro_ID.'" method="post">';
+					echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
+					echo'			</form>';
+					echo'		</td>					   ';
 					echo'	</tr>';
 				}
 				echo'</table>';
@@ -158,11 +170,17 @@
 					$title= $row["title"];
 					$author= $row["author"];
 					$price= $row["price"];
+					$pro_ID = $row["product_ID"];
 							
 					echo '	<tr>';
 					echo'		<td><a href="">Title: '.$title.'</a></td>';
 					echo'		<td>Author:'.$author.'</td>';
 					echo'		<td>Price:'.$price.'$</td>';
+					echo'		<td>					   ';
+					echo'			<form action="book_information_auth.php?p_id='.$pro_ID.'" method="post">';
+					echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
+					echo'			</form>';
+					echo'		</td>					   ';
 					echo'		<td>';
 					echo'			<form action="">';
 					echo'				<button >Create Review</button>';
