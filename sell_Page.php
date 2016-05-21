@@ -1,6 +1,5 @@
+<?php session_start();?>
 <html>
-
-<?php require_once('PHP/publish_book.php');?>
 
 <title>Sell Page</title>
 <link rel="stylesheet" href="style/profile_history.css"/>
@@ -39,7 +38,7 @@
 					<div id= "form">
 						<center>
 								<p><span class="error">All fields required</span></p>
-									<form method="post" action="publish_book.php">  
+									<form method="post" action="./PHP/publish_book.php">  
 									  Title: <input type="text" name="title">
 									  <span class="error"> </span>
 									  <br><br>

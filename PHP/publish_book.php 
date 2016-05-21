@@ -1,3 +1,5 @@
+<DOCTYPE!>
+<html>
 <?php  
 	
 DEFINE('DB_USERNAME', 'root');
@@ -12,7 +14,7 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 
-			$isbn_10Err = $titleErr = $authorErr = $publish_dateErr = $edition = $subject = "";
+			$isbn_10Err = $titleErr = $authorErr = $publish_dateErr = $editionErr = $subjectErr = "";
 			$isbn_10 = $title  = $author  = $publish_date = $edition = $subject =  "";
 		
 			
@@ -83,4 +85,4 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 	
 
 ?>
- 
+</html>
