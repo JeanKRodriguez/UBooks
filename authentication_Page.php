@@ -48,7 +48,7 @@
 		<div class="content_wrapper">
 			<div id="content_area">
 				<!--display database content-->
-				<?php seachProducts();?> 
+				<?php seachProducts_Auth();?> 
 				
 				<!--END display database content-->
 				

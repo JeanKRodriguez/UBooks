@@ -16,7 +16,7 @@
 			<!--Login and Sign up Links -->
 			<div class="Account_header"> 
 			<?php if (!empty($old_user)){echo '(Logged out.) ';}else{ echo '(You are not logged in.) '; }?>
-			<a href="loginPage.php" >Login</a> | <a href="" >Sign up</a> 
+			<a href="loginPage.php" >Login</a> | <a href="signUp_Page.php" >Sign up</a> 
 			</div>
 
 			<h1 id="title">UBooks</h1>

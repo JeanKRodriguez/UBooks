@@ -10,7 +10,7 @@
 		<!--Header -->
 		<div class="header">
 			<!--Login and Sign up Links -->
-			<div class="Account_header"> (You are not logged in.) <a href="loginPage.php" > Login</a> | <a href="" >Sign up</a> </div>
+			<div class="Account_header"> (You are not logged in.) <a href="loginPage.php" > Login</a> | <a href="signUp_Page.php" >Sign up</a> </div>
 
 			<h1 id="title">UBooks </h1>
 		</div>
