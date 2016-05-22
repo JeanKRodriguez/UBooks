@@ -15,7 +15,10 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 			 
-		 $sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders)";
+		 $sql ="SELECT title, author, min(price) as price, product_ID  FROM products natural join books 
+				WHERE product_ID not in (select product_ID from orders)
+				group by isbn_10
+				order by title asc";
 		 
 		$result = $mysqli->query($sql);
 		if ($result->num_rows > 0) {
@@ -30,7 +33,7 @@
 				echo'	<tr>';
 				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
-				echo'		<td>Price:'.$price.'$</td>';
+				echo'		<td>Price:$'.$price.'</td>';
 				echo'		<td>					   ';
 				echo'			<form action="book_information.php?p_id='.$pro_ID.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
@@ -62,7 +65,10 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 		if($searchtype== 'showAll'){
-			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders)";
+			$sql ="SELECT title, author, min(price) as price, product_ID  FROM products natural join books 
+				WHERE product_ID not in (select product_ID from orders)
+				group by isbn_10
+				order by title asc";
 		}else{ 
 			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders) and ".$searchtype." like '%".$searchterm."%'"; 			
 		}
@@ -80,7 +86,7 @@
 				echo '	<tr>';
 				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
-				echo'		<td>Price:'.$price.' $</td>';
+				echo'		<td>Price: $'.$price.' </td>';
 				echo'		<td>					   ';
 				echo'			<form action="book_information.php?p_id='.$pro_ID.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';
@@ -112,7 +118,10 @@
 		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 		 }
 		if($searchtype== 'showAll'){
-			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders)";
+			$sql ="SELECT title, author, min(price) as price, product_ID  FROM products natural join books 
+				WHERE product_ID not in (select product_ID from orders)
+				group by isbn_10
+				order by title asc";
 		}else{ 
 			$sql = "SELECT * FROM products natural join books WHERE product_ID not in (select product_ID from orders) and ".$searchtype." like '%".$searchterm."%'"; 			
 		}
@@ -130,7 +139,7 @@
 				echo '	<tr>';
 				echo'		<td>Title: '.$title.'</td>';
 				echo'		<td>Author:'.$author.'</td>';
-				echo'		<td>Price:'.$price.' $</td>';
+				echo'		<td>Price: $'.$price.' </td>';
 				echo'		<td>					   ';
 				echo'			<form action="book_information_auth.php?p_id='.$pro_ID.'" method="post">';
 				echo'				<button name="product_ID" type="submit" value="'.$pro_ID.'">View Information</button>';

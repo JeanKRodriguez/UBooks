@@ -28,7 +28,6 @@
 			<div class="menu_bar">
 				<ul id="menu">
 					<li><a href="index.php">Home</a></li>
-					<li><a href="">About us</a></li>
 				</ul>
 								
 				<div id="form">
