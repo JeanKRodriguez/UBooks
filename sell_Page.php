@@ -1,4 +1,5 @@
 <?php session_start();?>
+
 <html>
 
 <title>Sell Page</title>
@@ -37,25 +38,25 @@
 
 					<div id= "form">
 						<center>
-								<p><span class="error">All fields required</span></p>
-									<form method="post" action="./PHP/publish_book.php">  
+								<p><span >All fields required</span></p>
+									<form method="post" action="publish_book.php">  
 									  Title: <input type="text" name="title">
-									  <span class="error"> </span>
+									  
 									  <br><br>
 									  Author: <input type="text" name="author">
-									  <span class="error"> </span>
+									
 									  <br><br>
 									  Subject: <input type="text" name="subject">
-									  <span class="error"></span>
+									  
 									  <br><br>
 									  Publish Date: <input type="text" name="publish_date">
-									  <span class="error"></span>
+									  
 									  <br><br>
 									  Edition: <input type="text" name="edition">
-									  <span class="error"></span>
+									  
 									  <br><br>
 									  ISBN: <input type="text" name="isbn_10">
-									  <span class="error"></span>
+									  
 									  <br><br>
 			  
 									  <input type="submit" name="submit" value="Submit">  
@@ -66,6 +67,7 @@
 			</div>
 			
 		</div>
+		
 		<div id="footer"></div> 
 	</div>
 	

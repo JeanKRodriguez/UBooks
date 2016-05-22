@@ -8,8 +8,8 @@
 	DEFINE('DB_DATABASE', 'ubooks');
 
 
-	function viewDetails{
-		$this_prod  = $_POST["product_ID"];
+	function viewDetails(){
+		$this_prod = $_POST['product_ID'];
 
 		$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
