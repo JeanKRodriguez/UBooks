@@ -43,11 +43,8 @@
 						</td>
 					</td>
 					<tr>
-						<td>You are Reviewing: </td>
 						<td>
-						<select name="reviewing">
-							<?php echo '<option value="'.$_POST["This_reviewer_ID"].'"></option>';?>
-						</select>
+							<?php echo '<input  type="hidden" name="reviewing" value="'.$_POST["This_reviewer_ID"].'">';?>
 						</td>
 					</tr>
 					<tr>
