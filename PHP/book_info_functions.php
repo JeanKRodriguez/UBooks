@@ -68,7 +68,9 @@
             	echo ' <div style = "width: 100%; align: center; font-size: 12px ">';
            	    echo ' <center>';
             	echo ' <h1 class ="spacer">Price: $'.$price.'</h1>';
-                echo ' <button  class ="button" type="button">Order!</button>';
+				echo'			<form action="order_Book.php?p_id='.$_POST['product_ID'].'" method="post">';
+				echo'				<button class ="button" name="product_ID" type="submit" value="'.$_POST['product_ID'].'">Order</button>';
+				echo'			</form>';
             	echo ' </center>';
             echo '</div>';      
 
