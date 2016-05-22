@@ -1,16 +1,16 @@
-<?php  
-	
-DEFINE('DB_USERNAME', 'root');
-DEFINE('DB_PASSWORD', 'root');
-DEFINE('DB_HOST', 'localhost');
-DEFINE('DB_DATABASE', 'ubooks');
+<?php 
+				
+			DEFINE('DB_USERNAME', 'root');
+			DEFINE('DB_PASSWORD', 'root');
+			DEFINE('DB_HOST', 'localhost');
+			DEFINE('DB_DATABASE', 'ubooks');
 
 
-$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+			$mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-		 if (mysqli_connect_error()) {
-		  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
-		 }
+		 	if (mysqli_connect_error()) {
+		  		die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+		 	}
 
 			$isbn_10Err = $titleErr = $authorErr = $publish_dateErr = $edition = $subject = "";
 			$isbn_10 = $title  = $author  = $publish_date = $edition = $subject =  "";
@@ -58,7 +58,7 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 		  $data = stripslashes($data);
 		  $data = htmlspecialchars($data);
 		  return $data;
-		}
+		  }
 
 		$sql = 'INSERT INTO Books (isbn_10, title, author, subject, publish_date, edition) VALUES ("'.$isbn_10.', '.$title.', '.$author.', '.$subject.', '.$publish_date.', '.$edition.')';
 
@@ -83,4 +83,3 @@ $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 	
 
 ?>
- 

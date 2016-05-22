@@ -39,7 +39,7 @@
 					<div id= "form">
 						<center>
 								<p><span >All fields required</span></p>
-									<form method="post" action="PHP/publish_book.php">  
+									<form method="post" action="publish_book.php">  
 									  Title: <input type="text" name="title">
 									  
 									  <br><br>
@@ -67,6 +67,7 @@
 			</div>
 			
 		</div>
+		
 		<div id="footer"></div> 
 	</div>
 	
