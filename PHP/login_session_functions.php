@@ -64,11 +64,7 @@
 			echo'	<tr><td> Phone Number: '.$user["phone_num"].'<td></tr>';
 			echo'	<tr><td> Email: '.$user["email"].'<td></tr>';	
 			echo'</table>';
-			echo'	<div style="padding-left:100px;padding-top:50px">';
-			echo'		<form action="">';
-			echo'			<button >Edit</button>';
-			echo'		</form>';
-			echo'	</div>';
+
 			$mysqli->close();
 	}
 	
@@ -104,11 +100,6 @@
 					echo'	</tr>';
 				}
 				echo'</table>';
-				echo'	<div style="padding-left:100px;padding-top:50px">';
-				echo'		<form action="">';
-				echo'			<button >Order</button>';
-				echo'		</form>';
-				echo'	</div>';
 			} else {
 			echo "<p>You have no books for sale</p>";
 			}
