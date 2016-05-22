@@ -1,6 +1,6 @@
 <?php  
 	
-		// Incomplete
+		
 		
 	DEFINE('DB_USERNAME', 'root');
 	DEFINE('DB_PASSWORD', 'root');
@@ -23,9 +23,9 @@
 			  die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
 			}
 			
-			$max_prod_ID=$mysqli->query('SELECT max(review_ID) as review_ID FROM review');
-			$new_ID = $max_prod_ID->fetch_assoc();
-			$new_userID= $new_ID['product_ID'] + 1;
+			$max_review_ID=$mysqli->query('SELECT max(review_ID) as review_ID FROM review');
+			$new_ID = $max_review_ID->fetch_assoc();
+			$new_userID= $new_ID['review_ID'] + 1;
 		
 			$sql = 'insert into review values("'.$new_userID.'","'.$my_ID.'","'.$revewing_ID.'",'.$stars.')';
 				

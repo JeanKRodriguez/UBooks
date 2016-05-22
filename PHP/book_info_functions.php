@@ -67,7 +67,7 @@
 
             	echo ' <div style = "width: 100%; align: center; font-size: 12px ">';
            	    echo ' <center>';
-            	echo ' <h1 class ="spacer">Price: '.$price.'$</h1>';
+            	echo ' <h1 class ="spacer">Price: $'.$price.'</h1>';
                 echo ' <button  class ="button" type="button">Order!</button>';
             	echo ' </center>';
             echo '</div>';      

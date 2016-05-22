@@ -58,6 +58,16 @@
 									  ISBN: <input type="text" name="isbn_10">
 									  
 									  <br><br>
+									  Pay Method: <input type="test" name="pay_method">
+									  
+									  <br><br>
+									  Delivery Method: <input type="text" name="delivery_method">
+									  
+									  <br><br>
+									  Price: <input type="text" name="price">
+									  
+									  <br><br>
+									  
 			  
 									  <input type="submit" name="submit" value="Submit">  
 									</form>			
