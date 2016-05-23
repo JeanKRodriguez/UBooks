@@ -32,20 +32,17 @@
 			
 			$max_prod_ID=$mysqli->query('SELECT max(product_ID) as product_ID FROM products');
 			$new_ID = $max_prod_ID->fetch_assoc();
-			$new_userID= $new_ID['product_ID'] + 1;
+			$new_productID= $new_ID['product_ID'] + 1;
 			
 			
-			$sql_products = 'insert into products values("'.$new_userID.'","'.$my_ID.'","'.$isbn_10.'",'.$price.',"'.$pay_method.'","'.$delivery_method.'")';
-			
-			// For some reason the query doesnt want to execute even though the query itself is fine
-			$result_prod = $mysqli->query($sql_products); 
-			echo $result_prod;
+			$sql_products = 'insert into products values("'.$new_productID.'","'.$my_ID.'","'.$isbn_10.'",'.$price.',"'.$pay_method.'","'.$delivery_method.'")';
+			$prod_results = $mysqli->query($sql_products); 
 			
 			
 			$sql_books = 'insert into books values("'.$isbn_10.'","'.$title.'","'.$author.'","'.$publish_date.'",'.$edition.',"'.$subject.'")';	
 			$result_books = $mysqli->query($sql_books);
 			
-			if($result_products && $result_books){
+			if($prod_results && $result_books){
 				echo'<p>Your Book was Published </p>';
 			}     
 

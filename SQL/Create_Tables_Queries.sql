@@ -7,8 +7,8 @@ drop table if exists Users;
 create table Books(
 	isbn_10 varchar(10) not null,
 	title char(30) not null,
-    author char(30),
-    publish_date date,
+    	author char(30),
+    	publish_date date,
 	edition int(2),
 	subject char(15),
 	
@@ -17,10 +17,10 @@ create table Books(
 
 create table Users(
 	user_ID varchar(5) not null,
-	user_name char(30),
+	user_name char(30) not null,
 	phone_num int(10),
-	email char(30),
-	passwords char(40),
+	email char(30)	not null,
+	passwords char(40) not null,
 	
 	primary key (user_ID)
 );
@@ -29,7 +29,7 @@ create table Review(
 	review_ID varchar(5) not null,
 	reviewer_ID varchar(5) not null,
 	reviewing_ID varchar(5) not null,
-	stars int(1),
+	stars int(1) not null,
 	
 	primary key (review_ID),
 	foreign key (reviewer_ID) references Users(user_ID),
@@ -40,9 +40,9 @@ create table Products(
 	product_ID varchar(5) not null,
 	user_ID varchar(5) not null,
 	isbn_10 varchar(10) not null,
-	price float(5,2),
-	pay_method char(30),
-	delivery_method char(30),
+	price float(5,2) not null,
+	pay_method char(30) not null,
+	delivery_method char(30) not null,
 	
 	primary key (product_ID),
 	foreign key (user_ID) references Users(user_ID),
@@ -53,7 +53,7 @@ create table Orders(
 	order_ID varchar(5) not null,
 	user_ID varchar(5) not null,
 	product_ID varchar(5) not null,
-	order_date datetime,
+	order_date datetime not null,
 	address_1 varchar(30),
 	city char(15),
 	states char(15),
