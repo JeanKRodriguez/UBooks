@@ -6,7 +6,7 @@ In this project, we will develop a website that allows clients to sell and purch
 
 Usage:
 
-First set up a local server, such as `MAMP`, and create a database. Next, run the query in the SQL directory. This query will create the schema and add the test data. Finally, while the local server is running run `home.html` script.
+First set up a local server, such as `MAMP`, and create a database. Next, run the query in the SQL directory. This query will create the schema and add the test data. Finally, while the local server is running,execute `index.php` script.
 
 TODO:
 
