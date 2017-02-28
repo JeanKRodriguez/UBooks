@@ -6,7 +6,9 @@ In this project, we will develop a website that allows clients to sell and purch
 
 Usage:
 
-First set up a local server, such as `MAMP`, and create a database. Next, run the query in the SQL directory. This query will create the schema and add the test data. Finally, while the local server is running,execute `index.php` script.
+`MAMP` was used to create a local server environment. The following shows how to set up an run the project with MAMP:
+
+First run MAMP and proceed to phpMyAdmin. Next, create a new database named `ubooks` and run the `Create_Tables_Queries.sql` query that is located in the SQL directory of the UBooks project. This query will create the schema and add the test data. Next, in your local directory, move the UBooks directory to the `MAMP\htdocs\` directory. Finally, while the local server is running, open a browser and write `http://localhost/UBooks/`.
 
 TODO:
 
